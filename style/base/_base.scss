@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-stack;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+
+h1 {
+    color: $white;
+    font-weight: 600;
+}
+
+h2, h3 {
+    color: $primary-red;
+    font-weight: 400;
+}
+
+p {
+    color: $primary-grey; // Might be black or something else, we'll see
+}
