@@ -8,11 +8,12 @@
 
 // Component styles
 @import 'components/buttons',
-        'components/images';
+        'components/images',
+        'components/lines';
 
 // Layout styles
 @import 'layout/header',
         'layout/banner',
         'layout/nav',
-        'layout/containers',
-        'layout/footer';
+        'layout/footer',
+        'layout/homepage';

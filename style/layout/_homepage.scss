@@ -1,0 +1,141 @@
+.about-section {
+    width: 100%;
+    padding: 80px 20px 0;
+    .about-content {
+        width: 100%;
+        margin: auto;
+        h2 {
+            text-align: center;
+        }
+        .line-heading {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.services-section {
+    width: 100%;
+    padding: 80px 20px 0;
+    .services-content {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        .line-heading {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .services-list {
+        display: flex;
+        flex-flow: row wrap;
+        flex-basis: 100%;
+        .line-services {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        img {
+            max-width: 100%;
+        }
+        p {
+            margin-bottom: 80px;
+        }
+    }
+}
+
+.testimonial-section {
+    width: 100%;
+    // min-height: 387px; // for larger viewports
+    padding: 20px;
+    background: linear-gradient(rgba(0, 0, 0, .5)),
+                url('../img/testimonial-bg.jpg') no-repeat center;
+    background-size: contain, cover;
+    .testimonial-content {
+        max-width: 1107px;
+        margin: auto;
+        .testimonial-quote {
+            display: flex;
+            justify-content: space-around;
+            color: $white;
+            font-size: 24px;
+            p {
+                text-align: center;
+                color: $white;
+                font-size: 24px;
+                font-weight: 300;
+                line-height: 1.25em;
+                letter-spacing: 2px;
+                padding: 0 10px;
+            }
+            i:first-child {
+                margin-top: 30px;
+            }
+            i:last-child {
+                margin-top: auto;
+                margin-bottom: 28px;
+            }
+        }
+        .line-testimonial {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        span {
+            display: block;
+            margin: auto;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 300;
+            letter-spacing: 2px;
+            line-height: 1.5em;
+            color: $white;
+            margin-bottom: 28px;
+        }
+    }
+}
+
+.partners-section {
+    width: 100%;
+    padding: 80px 20px 60px;
+    .partners-content {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        .line-heading {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .partners-list {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            div {
+                padding-bottom: 50px;
+            }
+        }
+    }
+}
+
+.booking-section {
+    width: 100%;
+    padding: 20px;
+    background-color: $primary-grey;
+    .booking-content {
+        padding-bottom: 18px;
+        p {
+            text-align: center;
+            color: $white;
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 1.25em;
+            letter-spacing: 2px;
+        }
+        .btn {
+            background-color: $white;
+            color: $primary-red;
+            margin: auto;
+        }
+    }
+}

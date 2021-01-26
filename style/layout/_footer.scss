@@ -1,9 +1,9 @@
 .main-footer{
     background-color: #af473c;
     color: #fff;
-    .footer-container{
-        margin-right: 350px;
-        margin-left: 350px;
+    .footer-container{ // Had to comment some stuff out cos they were messing with the single-column view
+        // margin-right: 350px; 
+        // margin-left: 350px;
         padding-left: 15px;
         padding-right: 15px;
         height: 250px;
@@ -16,7 +16,7 @@
             width: 100%;
             .footer-column{
                 display: flex;
-                flex-direction: row;
+                flex-flow: row wrap; // Made this wrap for the same reason (didn't fix any side-effects tho soz lol)
                 justify-content: space-around;
                 flex-basis: 100%;
                 flex: 1;
