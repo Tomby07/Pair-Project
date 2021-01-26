@@ -1,0 +1,95 @@
+.main-footer{
+    background-color: #af473c;
+    color: #fff;
+    .footer-container{
+        margin-right: 350px;
+        margin-left: 350px;
+        padding-left: 15px;
+        padding-right: 15px;
+        height: 250px;
+        .footer-row{
+            margin-left: -15px;
+            margin-right: -15px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            .footer-column{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                flex-basis: 100%;
+                flex: 1;
+                .contact-us{
+                    margin-top: 50px;
+                    margin-bottom: 30px;
+                    position: relative;
+                    min-height: 1px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    h4{
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-size: 1rem;
+                        margin-bottom: 26px;
+                        font-weight: 400;
+                        margin: 0 0 15px;
+                    }
+                    ul{
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+                .sections{
+                    margin-top: 50px;
+                    margin-bottom: 30px;
+                    position: relative;
+                    min-height: 1px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    h4{
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-size: 1rem;
+                        margin-bottom: 26px;
+                        font-weight: 400;
+                        margin: 0 0 15px;
+                    }
+                    ul{
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+                .follow-us{
+                    margin-top: 50px;
+                    margin-bottom: 30px;
+                    position: relative;
+                    min-height: 1px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    h4{
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-size: 1rem;
+                        margin-bottom: 26px;
+                        font-weight: 400;
+                        margin: 0 0 15px;
+                    }
+                    ul{
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    .copyright{
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 20px;
+        
+    }
+}
