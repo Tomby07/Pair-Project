@@ -368,11 +368,12 @@ h1 {
 h2 {
   font-size: 36px;
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 h3 {
   font-size: 24px;
+  margin-bottom: 20px;
 }
 
 p {
@@ -411,7 +412,7 @@ strong {
   width: 200px;
   height: 1px;
   background-color: #3c3c3c;
-  margin-bottom: 56px;
+  margin-bottom: 60px;
 }
 
 .line-services {
@@ -570,13 +571,31 @@ strong {
   margin: auto;
 }
 
+@media (min-width: 1150px) {
+  .about-section .about-content {
+    width: 1110px;
+  }
+}
+
 .about-section .about-content h2 {
   text-align: center;
+}
+
+@media (min-width: 1150px) {
+  .about-section .about-content h2 {
+    text-align: left;
+  }
 }
 
 .about-section .about-content .line-heading {
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (min-width: 1150px) {
+  .about-section .about-content .line-heading {
+    margin-left: 0;
+  }
 }
 
 .about-section .about-content p:last-child {
@@ -591,12 +610,33 @@ strong {
 .services-section .services-content {
   width: 100%;
   margin: auto;
+}
+
+@media (min-width: 1150px) {
+  .services-section .services-content {
+    width: 1110px;
+  }
+}
+
+.services-section .services-content h2 {
   text-align: center;
+}
+
+@media (min-width: 1150px) {
+  .services-section .services-content h2 {
+    text-align: left;
+  }
 }
 
 .services-section .services-content .line-heading {
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (min-width: 1150px) {
+  .services-section .services-content .line-heading {
+    margin-left: 1px;
+  }
 }
 
 .services-section .services-list {
@@ -607,20 +647,46 @@ strong {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  text-align: center;
+}
+
+@media (min-width: 1150px) {
+  .services-section .services-list {
+    width: 1110px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.services-section .services-list div {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
 }
 
-.services-section .services-list .line-services {
+@media (min-width: 1150px) {
+  .services-section .services-list div {
+    -ms-flex-preferred-size: 344px;
+        flex-basis: 344px;
+  }
+}
+
+.services-section .services-list div .line-services {
   margin-left: auto;
   margin-right: auto;
 }
 
-.services-section .services-list img {
+@media (min-width: 1150px) {
+  .services-section .services-list div .line-services {
+    margin-bottom: 20px;
+  }
+}
+
+.services-section .services-list div img {
   max-width: 100%;
 }
 
-.services-section .services-list p {
+.services-section .services-list div p {
   margin-bottom: 80px;
 }
 
@@ -632,8 +698,14 @@ strong {
   background-size: contain, cover;
 }
 
+@media (min-width: 1150px) {
+  .testimonial-section {
+    height: 387px;
+  }
+}
+
 .testimonial-section .testimonial-content {
-  max-width: 1107px;
+  max-width: 1100px;
   margin: auto;
 }
 
@@ -641,8 +713,9 @@ strong {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   color: #fff;
   font-size: 24px;
 }
@@ -655,6 +728,13 @@ strong {
   line-height: 1.25em;
   letter-spacing: 2px;
   padding: 0 10px;
+}
+
+@media (min-width: 1150px) {
+  .testimonial-section .testimonial-content .testimonial-quote p {
+    -ms-flex-preferred-size: 905px;
+        flex-basis: 905px;
+  }
 }
 
 .testimonial-section .testimonial-content .testimonial-quote i:first-child {
@@ -694,21 +774,55 @@ strong {
   text-align: center;
 }
 
+@media (min-width: 1150px) {
+  .partners-section .partners-content {
+    width: 1110px;
+  }
+}
+
+.partners-section .partners-content h2 {
+  text-align: center;
+}
+
+@media (min-width: 1150px) {
+  .partners-section .partners-content h2 {
+    text-align: left;
+  }
+}
+
 .partners-section .partners-content .line-heading {
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (min-width: 1150px) {
+  .partners-section .partners-content .line-heading {
+    margin-left: 1px;
+  }
 }
 
 .partners-section .partners-content .partners-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 1150px) {
+  .partners-section .partners-content .partners-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
 }
 
 .partners-section .partners-content .partners-list div {
@@ -721,8 +835,32 @@ strong {
   background-color: #3c3c3c;
 }
 
+@media (min-width: 1150px) {
+  .booking-section {
+    padding-bottom: 0;
+    height: 182px;
+  }
+}
+
 .booking-section .booking-content {
   padding-bottom: 18px;
+}
+
+@media (min-width: 1150px) {
+  .booking-section .booking-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 1110px;
+    height: 100%;
+    margin: auto;
+  }
 }
 
 .booking-section .booking-content p {
@@ -734,9 +872,25 @@ strong {
   letter-spacing: 2px;
 }
 
+@media (min-width: 1150px) {
+  .booking-section .booking-content p {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    text-align: left;
+    padding-bottom: 10px;
+  }
+}
+
 .booking-section .booking-content .btn {
   background-color: #fff;
   color: #af473c;
   margin: auto;
+}
+
+@media (min-width: 1150px) {
+  .booking-section .booking-content .btn {
+    -ms-flex-preferred-size: 200px;
+        flex-basis: 200px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
