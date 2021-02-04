@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -347,12 +348,13 @@ template {
 }
 
 body {
-  font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
+  font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3 {
   text-transform: uppercase;
-  letter-spacing: 5px;
 }
 
 h2, h3 {
@@ -366,19 +368,21 @@ h1 {
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 37px;
+  letter-spacing: 4px;
   margin-top: 0;
   margin-bottom: 20px;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 25px;
+  letter-spacing: 2px;
   margin-bottom: 20px;
 }
 
 p {
   color: #3c3c3c;
-  font-size: 18px;
+  font-size: 18.5px;
   line-height: 23px;
   margin-bottom: 28px;
 }
@@ -398,6 +402,7 @@ strong {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-width: 200px;
   width: 200px;
   height: 45px;
 }
@@ -405,7 +410,7 @@ strong {
 .btn span {
   font-size: 18px;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 .line-heading {
@@ -413,13 +418,23 @@ strong {
   height: 1px;
   background-color: #3c3c3c;
   margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1150px) {
+  .line-heading {
+    margin-left: 0;
+  }
 }
 
 .line-services {
   width: 125px;
   height: 1px;
   background-color: #3c3c3c;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .line-testimonial {
@@ -428,6 +443,8 @@ strong {
   height: 1px;
   background-color: #fff;
   margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .banner .banner-img {
@@ -561,85 +578,87 @@ strong {
   padding-bottom: 20px;
 }
 
-.about-section {
+.homepage .about-section {
   width: 100%;
   padding: 80px 20px 0;
 }
 
-.about-section .about-content {
+.homepage .about-section .about-content {
   width: 100%;
   margin: auto;
 }
 
 @media (min-width: 1150px) {
-  .about-section .about-content {
+  .homepage .about-section .about-content {
     width: 1110px;
   }
 }
 
-.about-section .about-content h2 {
+.homepage .about-section .about-content h2 {
   text-align: center;
 }
 
 @media (min-width: 1150px) {
-  .about-section .about-content h2 {
+  .homepage .about-section .about-content h2 {
     text-align: left;
-  }
-}
-
-.about-section .about-content .line-heading {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (min-width: 1150px) {
-  .about-section .about-content .line-heading {
-    margin-left: 0;
-  }
-}
-
-.about-section .about-content p:last-child {
-  margin-bottom: 0;
-}
-
-.services-section {
-  width: 100%;
-  padding: 80px 20px 0;
-}
-
-.services-section .services-content {
-  width: 100%;
-  margin: auto;
-}
-
-@media (min-width: 1150px) {
-  .services-section .services-content {
-    width: 1110px;
-  }
-}
-
-.services-section .services-content h2 {
-  text-align: center;
-}
-
-@media (min-width: 1150px) {
-  .services-section .services-content h2 {
-    text-align: left;
-  }
-}
-
-.services-section .services-content .line-heading {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (min-width: 1150px) {
-  .services-section .services-content .line-heading {
     margin-left: 1px;
   }
 }
 
-.services-section .services-list {
+.homepage .about-section .about-content .line-heading {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1150px) {
+  .homepage .about-section .about-content .line-heading {
+    margin-left: 0;
+  }
+}
+
+.homepage .about-section .about-content p:last-child {
+  margin-bottom: 0;
+}
+
+.homepage .services-section {
+  width: 100%;
+  padding: 80px 20px 0;
+}
+
+.homepage .services-section .services-content {
+  width: 100%;
+  margin: auto;
+}
+
+@media (min-width: 1150px) {
+  .homepage .services-section .services-content {
+    width: 1110px;
+  }
+}
+
+.homepage .services-section .services-content h2 {
+  text-align: center;
+}
+
+@media (min-width: 1150px) {
+  .homepage .services-section .services-content h2 {
+    text-align: left;
+    margin-left: 1px;
+  }
+}
+
+.homepage .services-section .services-content .line-heading {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1150px) {
+  .homepage .services-section .services-content .line-heading {
+    margin-left: 0;
+  }
+}
+
+.homepage .services-section .services-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -651,7 +670,7 @@ strong {
 }
 
 @media (min-width: 1150px) {
-  .services-section .services-list {
+  .homepage .services-section .services-list {
     width: 1110px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -659,38 +678,27 @@ strong {
   }
 }
 
-.services-section .services-list div {
+.homepage .services-section .services-list div {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
 }
 
 @media (min-width: 1150px) {
-  .services-section .services-list div {
+  .homepage .services-section .services-list div {
     -ms-flex-preferred-size: 344px;
         flex-basis: 344px;
   }
 }
 
-.services-section .services-list div .line-services {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (min-width: 1150px) {
-  .services-section .services-list div .line-services {
-    margin-bottom: 20px;
-  }
-}
-
-.services-section .services-list div img {
+.homepage .services-section .services-list div img {
   max-width: 100%;
 }
 
-.services-section .services-list div p {
+.homepage .services-section .services-list div p {
   margin-bottom: 80px;
 }
 
-.testimonial-section {
+.homepage .testimonial-section {
   width: 100%;
   padding: 20px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url("../img/testimonial-bg.jpg") no-repeat center;
@@ -699,17 +707,17 @@ strong {
 }
 
 @media (min-width: 1150px) {
-  .testimonial-section {
+  .homepage .testimonial-section {
     height: 387px;
   }
 }
 
-.testimonial-section .testimonial-content {
+.homepage .testimonial-section .testimonial-content {
   max-width: 1100px;
   margin: auto;
 }
 
-.testimonial-section .testimonial-content .testimonial-quote {
+.homepage .testimonial-section .testimonial-content .testimonial-quote {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -717,10 +725,9 @@ strong {
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: #fff;
-  font-size: 24px;
 }
 
-.testimonial-section .testimonial-content .testimonial-quote p {
+.homepage .testimonial-section .testimonial-content .testimonial-quote p {
   text-align: center;
   color: #fff;
   font-size: 24px;
@@ -731,77 +738,80 @@ strong {
 }
 
 @media (min-width: 1150px) {
-  .testimonial-section .testimonial-content .testimonial-quote p {
+  .homepage .testimonial-section .testimonial-content .testimonial-quote p {
     -ms-flex-preferred-size: 905px;
         flex-basis: 905px;
   }
 }
 
-.testimonial-section .testimonial-content .testimonial-quote i:first-child {
-  margin-top: 30px;
+.homepage .testimonial-section .testimonial-content .testimonial-quote i {
+  font-size: 24px;
 }
 
-.testimonial-section .testimonial-content .testimonial-quote i:last-child {
+.homepage .testimonial-section .testimonial-content .testimonial-quote i:first-child {
+  margin-top: 24px;
+  padding-left: 3px;
+}
+
+.homepage .testimonial-section .testimonial-content .testimonial-quote i:last-child {
   margin-top: auto;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
+  padding-right: 3px;
 }
 
-.testimonial-section .testimonial-content .line-testimonial {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.testimonial-section .testimonial-content span {
+.homepage .testimonial-section .testimonial-content span {
   display: block;
   margin: auto;
+  font-size: 18.5px;
+  font-weight: 300;
   text-align: center;
   text-transform: uppercase;
-  font-weight: 300;
   letter-spacing: 2px;
-  line-height: 1.5em;
+  line-height: 1.3em;
   color: #fff;
   margin-bottom: 28px;
 }
 
-.partners-section {
+.homepage .partners-section {
   width: 100%;
   padding: 80px 20px 60px;
 }
 
-.partners-section .partners-content {
+.homepage .partners-section .partners-content {
   width: 100%;
   margin: auto;
   text-align: center;
 }
 
 @media (min-width: 1150px) {
-  .partners-section .partners-content {
+  .homepage .partners-section .partners-content {
     width: 1110px;
   }
 }
 
-.partners-section .partners-content h2 {
+.homepage .partners-section .partners-content h2 {
   text-align: center;
 }
 
 @media (min-width: 1150px) {
-  .partners-section .partners-content h2 {
+  .homepage .partners-section .partners-content h2 {
     text-align: left;
+    margin-left: 1px;
   }
 }
 
-.partners-section .partners-content .line-heading {
+.homepage .partners-section .partners-content .line-heading {
   margin-left: auto;
   margin-right: auto;
 }
 
 @media (min-width: 1150px) {
-  .partners-section .partners-content .line-heading {
-    margin-left: 1px;
+  .homepage .partners-section .partners-content .line-heading {
+    margin-left: 0;
   }
 }
 
-.partners-section .partners-content .partners-list {
+.homepage .partners-section .partners-content .partners-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -817,7 +827,7 @@ strong {
 }
 
 @media (min-width: 1150px) {
-  .partners-section .partners-content .partners-list {
+  .homepage .partners-section .partners-content .partners-list {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
@@ -825,29 +835,29 @@ strong {
   }
 }
 
-.partners-section .partners-content .partners-list div {
+.homepage .partners-section .partners-content .partners-list div {
   padding-bottom: 50px;
 }
 
-.booking-section {
+.homepage .booking-section {
   width: 100%;
   padding: 20px;
   background-color: #3c3c3c;
 }
 
 @media (min-width: 1150px) {
-  .booking-section {
+  .homepage .booking-section {
     padding-bottom: 0;
     height: 182px;
   }
 }
 
-.booking-section .booking-content {
+.homepage .booking-section .booking-content {
   padding-bottom: 18px;
 }
 
 @media (min-width: 1150px) {
-  .booking-section .booking-content {
+  .homepage .booking-section .booking-content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -863,7 +873,7 @@ strong {
   }
 }
 
-.booking-section .booking-content p {
+.homepage .booking-section .booking-content p {
   text-align: center;
   color: #fff;
   font-size: 24px;
@@ -873,24 +883,132 @@ strong {
 }
 
 @media (min-width: 1150px) {
-  .booking-section .booking-content p {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+  .homepage .booking-section .booking-content p {
+    -ms-flex-preferred-size: 800px;
+        flex-basis: 800px;
     text-align: left;
     padding-bottom: 10px;
   }
 }
 
-.booking-section .booking-content .btn {
+.homepage .booking-section .booking-content .btn {
   background-color: #fff;
   color: #af473c;
   margin: auto;
 }
 
 @media (min-width: 1150px) {
-  .booking-section .booking-content .btn {
+  .homepage .booking-section .booking-content .btn {
     -ms-flex-preferred-size: 200px;
         flex-basis: 200px;
   }
+}
+
+.testimonials-page .testimonial-section {
+  width: 100%;
+  padding: 20px;
+}
+
+@media (min-width: 1150px) {
+  .testimonials-page .testimonial-section {
+    height: 387px;
+  }
+}
+
+.testimonials-page .testimonial-section .testimonial-content {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.testimonials-page .testimonial-section .testimonial-content .testimonial-quote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+}
+
+.testimonials-page .testimonial-section .testimonial-content .testimonial-quote p {
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.25em;
+  letter-spacing: 2px;
+  padding: 0 10px;
+}
+
+@media (min-width: 1150px) {
+  .testimonials-page .testimonial-section .testimonial-content .testimonial-quote p {
+    -ms-flex-preferred-size: 905px;
+        flex-basis: 905px;
+  }
+}
+
+.testimonials-page .testimonial-section .testimonial-content .testimonial-quote i {
+  font-size: 24px;
+}
+
+.testimonials-page .testimonial-section .testimonial-content .testimonial-quote i:first-child {
+  margin-top: 24px;
+  padding-left: 3px;
+}
+
+.testimonials-page .testimonial-section .testimonial-content .testimonial-quote i:last-child {
+  margin-top: auto;
+  margin-bottom: 24px;
+  padding-right: 3px;
+}
+
+.testimonials-page .testimonial-section .testimonial-content span {
+  display: block;
+  margin: auto;
+  font-size: 18.5px;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.3em;
+  color: #fff;
+  margin-bottom: 28px;
+}
+
+.testimonials-page .quote-0 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url("../img/testimonial-bg.jpg") no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5)), url("../img/testimonial-bg.jpg") no-repeat center;
+  background-size: contain, cover;
+}
+
+.testimonials-page .quote-1 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url("../img/testimonial-bg-1.jpg") no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5)), url("../img/testimonial-bg-1.jpg") no-repeat center;
+  background-size: contain, cover;
+}
+
+.testimonials-page .quote-2 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url("../img/testimonial-bg-2.jpg") no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5)), url("../img/testimonial-bg-2.jpg") no-repeat center;
+  background-size: contain, cover;
+}
+
+.testimonials-page .quote-3 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url("../img/testimonial-bg-3.jpg") no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5)), url("../img/testimonial-bg-3.jpg") no-repeat center;
+  background-size: contain, cover;
+}
+
+.testimonials-page .slick-dots {
+  bottom: 70px;
+}
+
+.testimonials-page .slick-dots li {
+  margin: 0 20px;
+}
+
+.testimonials-page .slick-dots li button:before {
+  font-size: 12px;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

@@ -2,11 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 200px; // Prevents flexboxes messing with the size
     width: 200px;
     height: 45px;
     span {
         font-size: 18px;
         text-transform: uppercase;
-        letter-spacing: 3px;
+        letter-spacing: 2px;
     }
 }

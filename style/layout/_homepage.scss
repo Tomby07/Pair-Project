@@ -1,101 +1,194 @@
-.about-section {
-    width: 100%;
-    padding: 80px 20px 0;
-    .about-content {
-        width: 100%;
-        margin: auto;
-        @include mq('lg') {
-            width: 1110px;
-        }
-        h2 {
-            text-align: center;
-            @include mq('lg') {
-                text-align: left;
-            }
-        }
-        .line-heading {
-            margin-left: auto;
-            margin-right: auto;
-            @include mq('lg') {
-                margin-left: 0;
-            }
-        }
-        p:last-child {
-            margin-bottom: 0;
-        }
-    }
-}
+.homepage {
 
-.services-section {
-    width: 100%;
-    padding: 80px 20px 0;
-    .services-content {
+    .about-section {
         width: 100%;
-        margin: auto;
-        @include mq('lg') {
-            width: 1110px;
-        }
-        h2 {
-            text-align: center;
+        padding: 80px 20px 0;
+        .about-content {
+            width: 100%;
+            margin: auto;
             @include mq('lg') {
-                text-align: left;
+                width: 1110px;
             }
-        }
-        .line-heading {
-            margin-left: auto;
-            margin-right: auto;
-            @include mq('lg') {
-                margin-left: 1px;
+            h2 {
+                text-align: center;
+                @include mq('lg') {
+                    text-align: left;
+                    margin-left: 1px;
+                }
             }
-        }
-    }
-    .services-list {
-        display: flex;
-        flex-flow: row wrap;
-        text-align: center;
-        @include mq('lg') {
-            width: 1110px;
-            justify-content: space-between;
-        }
-        div {
-            flex-basis: 100%;
-            @include mq('lg') {
-                flex-basis: 344px;
-            }
-            .line-services {
+            .line-heading {
                 margin-left: auto;
                 margin-right: auto;
                 @include mq('lg') {
-                    margin-bottom: 20px;
+                    margin-left: 0;
                 }
             }
-            img {
-                max-width: 100%;
-            }
-            p {
-                margin-bottom: 80px;
+            p:last-child {
+                margin-bottom: 0;
             }
         }
     }
-}
 
-.testimonial-section {
-    width: 100%;
-    padding: 20px;
-    background: linear-gradient(rgba(0, 0, 0, .5)),
-                url('../img/testimonial-bg.jpg') no-repeat center;
-    background-size: contain, cover;
-    @include mq('lg') {
-        height: 387px;
-    }
-    .testimonial-content {
-        max-width: 1100px;
-        margin: auto;
-        .testimonial-quote {
+    .services-section {
+        width: 100%;
+        padding: 80px 20px 0;
+        .services-content {
+            width: 100%;
+            margin: auto;
+            @include mq('lg') {
+                width: 1110px;
+            }
+            h2 {
+                text-align: center;
+                @include mq('lg') {
+                    text-align: left;
+                    margin-left: 1px;
+                }
+            }
+            .line-heading {
+                margin-left: auto;
+                margin-right: auto;
+                @include mq('lg') {
+                    margin-left: 0;
+                }
+            }
+        }
+        .services-list {
             display: flex;
-            justify-content: space-between;
-            color: $white;
-            font-size: 24px;
+            flex-flow: row wrap;
+            text-align: center;
+            @include mq('lg') {
+                width: 1110px;
+                justify-content: space-between;
+            }
+            div {
+                flex-basis: 100%;
+                @include mq('lg') {
+                    flex-basis: 344px;
+                }
+                img {
+                    max-width: 100%;
+                }
+                p {
+                    margin-bottom: 80px;
+                }
+            }
+        }
+    }
+
+    .testimonial-section {
+        width: 100%;
+        padding: 20px;
+        background: linear-gradient(rgba(0, 0, 0, .5)),
+                    url('../img/testimonial-bg.jpg') no-repeat center;
+        background-size: contain, cover;
+        @include mq('lg') {
+            height: 387px;
+        }
+        .testimonial-content {
+            max-width: 1100px;
+            margin: auto;
+            .testimonial-quote {
+                display: flex;
+                justify-content: space-between;
+                color: $white;
+                p {
+                    text-align: center;
+                    color: $white;
+                    font-size: 24px;
+                    font-weight: 300;
+                    line-height: 1.25em;
+                    letter-spacing: 2px;
+                    padding: 0 10px;
+                    @include mq('lg') {
+                        flex-basis: 905px;
+                    }
+                }
+                i {
+                    font-size: 24px;
+                }
+                i:first-child {
+                    margin-top: 24px;
+                    padding-left: 3px;
+                }
+                i:last-child {
+                    margin-top: auto;
+                    margin-bottom: 24px;
+                    padding-right: 3px;
+                }
+            }
+            span {
+                display: block;
+                margin: auto;
+                font-size: 18.5px;
+                font-weight: 300;
+                text-align: center;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                line-height: 1.3em;
+                color: $white;
+                margin-bottom: 28px;
+            }
+        }
+    }
+
+    .partners-section {
+        width: 100%;
+        padding: 80px 20px 60px;
+        .partners-content {
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            @include mq('lg') {
+                width: 1110px;
+            }
+            h2 {
+                text-align: center;
+                @include mq('lg') {
+                    text-align: left;
+                    margin-left: 1px;
+                }
+            }
+            .line-heading {
+                margin-left: auto;
+                margin-right: auto;
+                @include mq('lg') {
+                    margin-left: 0;
+                }
+            }
+            .partners-list {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-around;
+                align-items: center;
+                @include mq('lg') {
+                    flex-flow: row nowrap;
+                }
+                div {
+                    padding-bottom: 50px;
+                }
+            }
+        }
+    }
+
+    .booking-section {
+        width: 100%;
+        padding: 20px;
+        background-color: $primary-grey;
+        @include mq('lg') {
+            padding-bottom: 0;
+            height: 182px;
+        }
+        .booking-content {
+            padding-bottom: 18px;
+            @include mq('lg') {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 1110px;
+                height: 100%;
+                margin: auto;
+            }
             p {
                 text-align: center;
                 color: $white;
@@ -103,113 +196,21 @@
                 font-weight: 300;
                 line-height: 1.25em;
                 letter-spacing: 2px;
-                padding: 0 10px;
                 @include mq('lg') {
-                    flex-basis: 905px;
+                    flex-basis: 800px;
+                    text-align: left;
+                    padding-bottom: 10px;
                 }
             }
-            i:first-child {
-                margin-top: 30px;
-            }
-            i:last-child {
-                margin-top: auto;
-                margin-bottom: 28px;
-            }
-        }
-        .line-testimonial {
-            margin-left: auto;
-            margin-right: auto;
-        }
-        span {
-            display: block;
-            margin: auto;
-            text-align: center;
-            text-transform: uppercase;
-            font-weight: 300;
-            letter-spacing: 2px;
-            line-height: 1.5em;
-            color: $white;
-            margin-bottom: 28px;
-        }
-    }
-}
-
-.partners-section {
-    width: 100%;
-    padding: 80px 20px 60px;
-    .partners-content {
-        width: 100%;
-        margin: auto;
-        text-align: center;
-        @include mq('lg') {
-            width: 1110px;
-        }
-        h2 {
-            text-align: center;
-            @include mq('lg') {
-                text-align: left;
-            }
-        }
-        .line-heading {
-            margin-left: auto;
-            margin-right: auto;
-            @include mq('lg') {
-                margin-left: 1px;
-            }
-        }
-        .partners-list {
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: space-around;
-            align-items: center;
-            @include mq('lg') {
-                flex-flow: row nowrap;
-            }
-            div {
-                padding-bottom: 50px;
+            .btn {
+                background-color: $white;
+                color: $primary-red;
+                margin: auto;
+                @include mq('lg') {
+                    flex-basis: 200px;
+                }
             }
         }
     }
-}
-
-.booking-section {
-    width: 100%;
-    padding: 20px;
-    background-color: $primary-grey;
-    @include mq('lg') {
-        padding-bottom: 0;
-        height: 182px;
-    }
-    .booking-content {
-        padding-bottom: 18px;
-        @include mq('lg') {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 1110px;
-            height: 100%;
-            margin: auto;
-        }
-        p {
-            text-align: center;
-            color: $white;
-            font-size: 24px;
-            font-weight: 300;
-            line-height: 1.25em;
-            letter-spacing: 2px;
-            @include mq('lg') {
-                flex-basis: 100%;
-                text-align: left;
-                padding-bottom: 10px;
-            }
-        }
-        .btn {
-            background-color: $white;
-            color: $primary-red;
-            margin: auto;
-            @include mq('lg') {
-                flex-basis: 200px;
-            }
-        }
-    }
+    
 }
