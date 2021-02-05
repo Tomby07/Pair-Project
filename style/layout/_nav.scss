@@ -1,0 +1,32 @@
+.main-nav{
+    background-color: #af473c;
+    .nav-container{
+        padding-left: 15px;
+        padding-right: 15px;
+        .nav-nav{
+            
+            padding: 0;
+            margin: 0;
+            margin-top: -5px;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            height: 40px;
+            @include mq('lg') {
+                height: 60px;
+                padding-left: 250px;
+                padding-right: 250px;
+            }
+            li{
+                padding-top: 12px;
+                flex: 1;
+                text-align: center;
+                @include mq('lg') {
+                    padding-top: 20px;
+                    font-weight: 900;
+                }
+                
+            }
+        }
+    }
+}
