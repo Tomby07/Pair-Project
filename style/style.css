@@ -374,6 +374,12 @@ h2 {
   margin-bottom: 20px;
 }
 
+@media (max-width: 348px) {
+  h2 {
+    font-size: 28px;
+  }
+}
+
 h3 {
   font-size: 25px;
   letter-spacing: 2px;
@@ -839,7 +845,7 @@ a {
   }
 }
 
-.homepage .partners-section .partners-content .partners-list div {
+.homepage .partners-section .partners-content .partners-list .partner {
   padding-bottom: 50px;
 }
 
@@ -908,6 +914,242 @@ a {
   }
 }
 
+.services-page .info-section {
+  width: 100%;
+  padding: 80px 20px 0;
+}
+
+.services-page .info-section .info-content {
+  width: 100%;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .services-page .info-section .info-content {
+    width: 728px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .services-page .info-section .info-content {
+    width: 1110px;
+  }
+}
+
+.services-page .info-section .info-content h2 {
+  text-align: center;
+}
+
+@media (min-width: 1150px) {
+  .services-page .info-section .info-content h2 {
+    text-align: left;
+    margin-left: 1px;
+  }
+}
+
+.services-page .info-section .info-content .line-heading {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1150px) {
+  .services-page .info-section .info-content .line-heading {
+    margin-left: 0;
+  }
+}
+
+.services-page .info-section .info-content p:last-child {
+  margin-bottom: 0;
+}
+
+.services-page .services-section {
+  width: 100%;
+  padding: 80px 20px 60px;
+}
+
+.services-page .services-section .services-content {
+  width: 100%;
+  margin: auto;
+}
+
+@media (min-width: 1150px) {
+  .services-page .services-section .services-content {
+    width: 1110px;
+  }
+}
+
+.services-page .services-section .services-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .services-page .services-section .services-list {
+    width: 768px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1150px) {
+  .services-page .services-section .services-list {
+    width: 1110px;
+  }
+}
+
+.services-page .services-section .services-list .service {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+@media (min-width: 768px) {
+  .services-page .services-section .services-list .service {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .services-page .services-section .services-list .service .service-image {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    min-width: 300px;
+  }
+  .services-page .services-section .services-list .service .service-info {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    padding: 0 40px;
+  }
+}
+
+.services-page .services-section .services-list .service img {
+  max-width: 300px;
+}
+
+.services-page .services-section .services-list .service p {
+  margin-bottom: 80px;
+}
+
+.services-page .services-section .services-list .service:nth-child(2n+2) {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+@media (min-width: 768px) {
+  .services-page .services-section .services-list .service:nth-child(2n+2) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .services-page .services-section .services-list .service:nth-child(2n+2) .service-image {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    min-width: 300px;
+  }
+  .services-page .services-section .services-list .service:nth-child(2n+2) .service-info {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    padding: 0 40px;
+  }
+}
+
+.services-page .services-section .services-list .service:nth-child(2n+2) img {
+  max-width: 300px;
+}
+
+.services-page .services-section .services-list .service:nth-child(2n+2) p {
+  margin-bottom: 80px;
+}
+
+.services-page .booking-section {
+  width: 100%;
+  padding: 20px;
+  background-color: #3c3c3c;
+}
+
+@media (min-width: 1150px) {
+  .services-page .booking-section {
+    padding-bottom: 0;
+    height: 182px;
+  }
+}
+
+.services-page .booking-section .booking-content {
+  padding-bottom: 18px;
+}
+
+@media (min-width: 1150px) {
+  .services-page .booking-section .booking-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 1110px;
+    height: 100%;
+    margin: auto;
+  }
+}
+
+.services-page .booking-section .booking-content p {
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.25em;
+  letter-spacing: 2px;
+}
+
+@media (min-width: 1150px) {
+  .services-page .booking-section .booking-content p {
+    -ms-flex-preferred-size: 800px;
+        flex-basis: 800px;
+    text-align: left;
+    padding-bottom: 10px;
+  }
+}
+
+.services-page .booking-section .booking-content .btn {
+  background-color: #fff;
+  color: #af473c;
+  margin: auto;
+}
+
+@media (min-width: 1150px) {
+  .services-page .booking-section .booking-content .btn {
+    -ms-flex-preferred-size: 200px;
+        flex-basis: 200px;
+  }
+}
+
 .testimonials-page .info-section {
   width: 100%;
   padding: 80px 20px 0;
@@ -916,6 +1158,12 @@ a {
 .testimonials-page .info-section .info-content {
   width: 100%;
   margin: auto;
+}
+
+@media (min-width: 768px) {
+  .testimonials-page .info-section .info-content {
+    width: 728px;
+  }
 }
 
 @media (min-width: 1150px) {
@@ -1046,7 +1294,13 @@ a {
 }
 
 .testimonials-page .slick-dots {
-  bottom: 60px;
+  bottom: 15px;
+}
+
+@media (min-width: 1150px) {
+  .testimonials-page .slick-dots {
+    bottom: 60px;
+  }
 }
 
 .testimonials-page .slick-dots li {
@@ -1068,6 +1322,12 @@ a {
   width: 100%;
   margin: auto;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .testimonials-page .partners-section .partners-content {
+    width: 728px;
+  }
 }
 
 @media (min-width: 1150px) {
@@ -1113,7 +1373,7 @@ a {
           align-items: center;
 }
 
-@media (min-width: 1150px) {
+@media (min-width: 768px) {
   .testimonials-page .partners-section .partners-content .partners-list {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1122,11 +1382,22 @@ a {
   }
 }
 
+.testimonials-page .partners-section .partners-content .partners-list .partner {
+  padding-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .testimonials-page .partners-section .partners-content .partners-list .partner {
+    padding-bottom: 0;
+  }
+}
+
 .testimonials-page .partners-section .partners-content .partners-list .partner:hover {
   cursor: pointer;
 }
 
 .testimonials-page .pointer {
+  display: none;
   position: absolute;
   bottom: -55px;
   left: 115px;
@@ -1137,14 +1408,32 @@ a {
           transform: rotate(45deg);
 }
 
+@media (min-width: 768px) {
+  .testimonials-page .pointer {
+    display: block;
+  }
+}
+
 .testimonials-page .partner-info-section {
   background-color: #3c3c3c;
   padding: 20px 0;
 }
 
 .testimonials-page .partner-info-section .partner-info-content {
-  width: 940px;
+  width: 100%;
   margin: auto;
+}
+
+@media (min-width: 768px) {
+  .testimonials-page .partner-info-section .partner-info-content {
+    width: 768px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .testimonials-page .partner-info-section .partner-info-content {
+    width: 980px;
+  }
 }
 
 .testimonials-page .partner-info-section .partner-info-content h3 {
@@ -1158,6 +1447,7 @@ a {
 .testimonials-page .partner-info-section .partner-info-content p {
   text-align: center;
   color: #fff;
+  padding: 0 20px;
 }
 
 .testimonials-page .partner-info-section .partner-info-content .btn {

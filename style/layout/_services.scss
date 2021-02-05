@@ -1,0 +1,148 @@
+.services-page {
+
+    .info-section {
+        width: 100%;
+        padding: 80px 20px 0;
+        .info-content {
+            width: 100%;
+            margin: auto;
+            @include mq('md') {
+                width: 728px;
+            }
+            @include mq('lg') {
+                width: 1110px;
+            }
+            h2 {
+                text-align: center;
+                @include mq('lg') {
+                    text-align: left;
+                    margin-left: 1px;
+                }
+            }
+            .line-heading {
+                margin-left: auto;
+                margin-right: auto;
+                @include mq('lg') {
+                    margin-left: 0;
+                }
+            }
+            p:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .services-section {
+        width: 100%;
+        padding: 80px 20px 60px;
+        .services-content {
+            width: 100%;
+            margin: auto;
+            @include mq('lg') {
+                width: 1110px;
+            }
+        }
+        .services-list {
+            display: flex;
+            flex-flow: row wrap;
+            text-align: center;
+            @include mq('md') {
+                width: 768px;
+                justify-content: space-between;
+                margin: auto;
+            }
+            @include mq('lg') {
+                width: 1110px;
+            }
+            .service {
+                flex-basis: 100%;
+                @include mq('md') {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    .service-image {
+                        order: 1;
+                        min-width: 300px;
+                    }
+                    .service-info {
+                        order: 2;
+                        flex-basis: auto;
+                        padding: 0 40px;
+                    }
+                }
+                img {
+                    max-width: 300px;
+                }
+                p {
+                    margin-bottom: 80px;
+                }
+            }
+            .service:nth-child(2n+2) {
+                flex-basis: 100%;
+                @include mq('md') {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    .service-image {
+                        order: 2;
+                        min-width: 300px;
+                    }
+                    .service-info {
+                        order: 1;
+                        flex-basis: auto;
+                        padding: 0 40px;
+                    }
+                }
+                img {
+                    max-width: 300px;
+                }
+                p {
+                    margin-bottom: 80px;
+                }
+            }
+        }
+    }
+
+    .booking-section {
+        width: 100%;
+        padding: 20px;
+        background-color: $primary-grey;
+        @include mq('lg') {
+            padding-bottom: 0;
+            height: 182px;
+        }
+        .booking-content {
+            padding-bottom: 18px;
+            @include mq('lg') {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 1110px;
+                height: 100%;
+                margin: auto;
+            }
+            p {
+                text-align: center;
+                color: $white;
+                font-size: 24px;
+                font-weight: 300;
+                line-height: 1.25em;
+                letter-spacing: 2px;
+                @include mq('lg') {
+                    flex-basis: 800px;
+                    text-align: left;
+                    padding-bottom: 10px;
+                }
+            }
+            .btn {
+                background-color: $white;
+                color: $primary-red;
+                margin: auto;
+                @include mq('lg') {
+                    flex-basis: 200px;
+                }
+            }
+        }
+    }
+
+}

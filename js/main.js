@@ -11,7 +11,7 @@ $(document).ready(function() {
     $('.quarrInfo').show();
     $('.pabulumInfo').hide();
     $('.mountjoyInfo').hide();
-    $('.pointer').css('left', pointerRelPos.left + 95);
+    $('.pointer').css('left', (pointerRelPos.left - 20) + 10.5 + '%'); // 95
 });
 
 $('.partnerQuarr').click(function() {
@@ -20,7 +20,10 @@ $('.partnerQuarr').click(function() {
             $('.quarrInfo').fadeIn(500);
         });
     });
-    $(".pointer").animate({left: pointerRelPos.left + 95});
+    $(".pointer").animate({left: (pointerRelPos.left - 20) + 10.5 + '%'}); // 95
+    if (window.innerWidth < 768) {
+        document.querySelector(".partner-info-section").scrollIntoView();
+    }
 });
 
 $('.partnerPabulum').click(function() {
@@ -29,7 +32,10 @@ $('.partnerPabulum').click(function() {
             $('.pabulumInfo').fadeIn(500);
         });
     });
-    $(".pointer").animate({left: pointerRelPos.left + 440});
+    $(".pointer").animate({left: (pointerRelPos.left - 20) + 41 + '%'}); // 440
+    if (window.innerWidth < 768) {
+        document.querySelector(".partner-info-section").scrollIntoView();
+    }
 });
 
 $('.partnerMountjoy').click(function() {
@@ -38,5 +44,8 @@ $('.partnerMountjoy').click(function() {
             $('.mountjoyInfo').fadeIn(500);
         });
     });
-    $(".pointer").animate({left: pointerRelPos.left + 870});
+    $(".pointer").animate({left: (pointerRelPos.left - 20) + 79.2 + '%'}); // 870
+    if (window.innerWidth < 768) {
+        document.querySelector(".partner-info-section").scrollIntoView();
+    }
 });
