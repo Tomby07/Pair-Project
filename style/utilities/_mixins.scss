@@ -2,16 +2,26 @@
     $value: map-get($breakpoints, $break);
     $md: map-get($breakpoints, 'md');
     @if $value == null {
-      @warn "`#{$break}` is not a valid breakpoint name (use 'sm', 'md', or 'lg'."
+        @warn "`#{$break}` is not a valid breakpoint name (use 'sm', 'md', or 'lg'."
     }
     @else if $value < $md {
-      @media (max-width: $value) {
-         @content;
-      }
+        @media (max-width: $value) {
+            @content;
+        }
     }
     @else {
-      @media (min-width: $value) {
-        @content;
-      }
+        @media (min-width: $value) {
+            @content;
+        }
     }
-  }
+}
+
+@mixin testimonial-bg {
+    @for $i from 1 through 4 {
+        .quote-#{$i} {
+            background: linear-gradient(rgba(0, 0, 0, .5)),
+                        url('../img/testimonial-bg-#{$i}.jpg') no-repeat center;
+            background-size: contain, cover;
+        }
+    }
+}

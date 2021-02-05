@@ -1,5 +1,36 @@
 .testimonials-page {
 
+    .info-section {
+        width: 100%;
+        padding: 80px 20px 0;
+        .info-content {
+            width: 100%;
+            margin: auto;
+            @include mq('lg') {
+                width: 1110px;
+            }
+            h2 {
+                text-align: center;
+                @include mq('lg') {
+                    text-align: left;
+                    margin-left: 1px;
+                }
+            }
+            .line-heading {
+                margin-left: auto;
+                margin-right: auto;
+                @include mq('lg') {
+                    margin-left: 0;
+                }
+            }
+            p:last-child {
+                margin-bottom: 80px;
+            }
+        }
+    }
+
+    @include testimonial-bg;
+
     .testimonial-section {
         width: 100%;
         padding: 20px;
@@ -53,32 +84,8 @@
         }
     }
 
-    .quote-0 {
-        background: linear-gradient(rgba(0, 0, 0, .5)),
-                    url('../img/testimonial-bg.jpg') no-repeat center;
-        background-size: contain, cover;
-    }
-
-    .quote-1 {
-        background: linear-gradient(rgba(0, 0, 0, .5)),
-                    url('../img/testimonial-bg-1.jpg') no-repeat center;
-        background-size: contain, cover;
-    }
-
-    .quote-2 {
-        background: linear-gradient(rgba(0, 0, 0, .5)),
-                    url('../img/testimonial-bg-2.jpg') no-repeat center;
-        background-size: contain, cover;
-    }
-
-    .quote-3 {
-        background: linear-gradient(rgba(0, 0, 0, .5)),
-                    url('../img/testimonial-bg-3.jpg') no-repeat center;
-        background-size: contain, cover;
-    }
-
     .slick-dots {
-        bottom: 70px;
+        bottom: 60px;
         li {
             margin: 0 20px;
             button:before {
@@ -87,4 +94,80 @@
             }
         }
     }
+
+    .partners-section {
+        width: 100%;
+        padding: 80px 20px 40px;
+        .partners-content {
+            position: relative;
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            @include mq('lg') {
+                width: 1110px;
+            }
+            h2 {
+                text-align: center;
+                @include mq('lg') {
+                    text-align: left;
+                    margin-left: 1px;
+                }
+            }
+            .line-heading {
+                margin-left: auto;
+                margin-right: auto;
+                @include mq('lg') {
+                    margin-left: 0;
+                }
+            }
+            .partners-list {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-around;
+                align-items: center;
+                @include mq('lg') {
+                    flex-flow: row nowrap;
+                }
+                .partner:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .pointer {
+        position: absolute;
+        bottom: -55px;
+        left: 115px;
+        width: 30px;
+        height: 30px;
+        background-color: $primary-grey;
+        transform: rotate(45deg);
+    }
+
+    .partner-info-section {
+        background-color: $primary-grey;
+        padding: 20px 0;
+        .partner-info-content {
+            width: 940px;
+            margin: auto;
+            h3 {
+                text-align: center;
+            }
+            .line-h3 {
+                background-color: $white;
+            }
+            p {
+                text-align: center;
+                color: $white;
+            }
+            .btn {
+                background-color: $white;
+                color: $primary-red;
+                width: 250px;
+                margin: 0 auto 25px;
+            }
+        }
+    }
+
 }
