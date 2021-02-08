@@ -1,8 +1,9 @@
+// Media queries mixin
 @mixin mq($break) {
     $value: map-get($breakpoints, $break);
     $md: map-get($breakpoints, 'md');
     @if $value == null {
-        @warn "`#{$break}` is not a valid breakpoint name (use 'sm', 'md', or 'lg'."
+        @warn "`#{$break}` is not a valid breakpoint name (use 'sm', 'md', or 'lg')"
     }
     @else if $value < $md {
         @media (max-width: $value) {
@@ -16,6 +17,7 @@
     }
 }
 
+// Testimonial slide background mixin
 @mixin testimonial-bg {
     @for $i from 1 through 4 {
         .quote-#{$i} {
