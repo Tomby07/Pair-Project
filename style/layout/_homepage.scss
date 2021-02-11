@@ -6,6 +6,9 @@
         .about-content {
             width: 100%;
             margin: auto;
+            @include mq('md') {
+                width: 768px;
+            }
             @include mq('lg') {
                 width: 1110px;
             }
@@ -31,114 +34,148 @@
 
     .services-section {
         width: 100%;
-        padding: 80px 20px 0;
-        .services-content {
-            width: 100%;
-            margin: auto;
-            @include mq('lg') {
-                width: 1110px;
-            }
-            h2 {
-                text-align: center;
-                @include mq('lg') {
-                    text-align: left;
-                    margin-left: 1px;
-                }
-            }
-            .line-heading {
-                margin-left: auto;
-                margin-right: auto;
-                @include mq('lg') {
-                    margin-left: 0;
-                }
-            }
+        padding-top: 80px;
+        @include mq('md') {
+            padding-bottom: 60px;
         }
-        .services-list {
-            display: flex;
-            flex-flow: row wrap;
+        h2 {
             text-align: center;
             @include mq('lg') {
-                width: 1110px;
-                justify-content: space-between;
+                text-align: left;
+                margin-left: 1px;
             }
-            div {
-                flex-basis: 100%;
+        }
+        .line-heading {
+            margin-left: auto;
+            margin-right: auto;
+            @include mq('lg') {
+                margin-bottom: 0;
+                margin-left: 0;
+            }
+        }
+        .services-content {
+            @include mq('md') {
+                width: 768px;
+                margin: auto;
+            }
+            @include mq('lg') {
+                width: 1110px;
+            }
+            .services-list {
+                width: 100%;
+                text-align: center;
                 @include mq('lg') {
-                    flex-basis: 344px;
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-between;
+                    text-align: center;
                 }
-                img {
-                    max-width: 100%;
-                }
-                p {
-                    margin-bottom: 80px;
+                .service {
+                    display: block;
+                    .service-image {
+                        position: relative;
+                        z-index: 1;
+                        height: 200px;
+                        max-height: 200px;
+                        overflow: hidden;
+                        img {
+                            width: 100%;
+                            min-width: 320px;
+                            min-height: 200px;
+                        }
+                    }
+                    .service-info {
+                        display: block;
+                        padding: 0 20px 40px;
+                        h3 {
+                            position: relative;
+                            z-index: 2;
+                            margin-top: -114.365px;
+                            margin-bottom: 139.365px;
+                            @include mq('sm') {
+                                font-size: 32px;
+                            }
+                        }
+                        .line-h3 {
+                            display: none;
+                        }
+                    }
+                    @include mq('md') {
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        margin-bottom: 40px;
+                        .service-image {
+                            order: 1;
+                            flex-basis: auto;
+                            margin-top: 65px;
+                            img {
+                                width: 300px;
+                                min-width: 300px;
+                            }
+                        }
+                        .service-info {
+                            order: 2;
+                            padding: 0 20px;
+                            flex-basis: 430px;
+                            h3 {
+                                margin-top: 25px;
+                                margin-bottom: 20px;
+                            }
+                            .line-h3 {
+                                display: block;
+                            }
+                        }
+                    }
+                    @include mq('lg') {
+                        display: block;
+                        flex-basis: 344px;
+                        .service-image {
+                            img {
+                                width: 344px;
+                                min-width: 344px;
+                            }
+                        }
+                        .service-info {
+                            flex-basis: 800px;
+                            padding: 0;
+                        }
+                    }
+                    &:nth-child(2n+2) {
+                        @include mq('md') {
+                            .service-image {
+                                order: 2;
+                            }
+                            .service-info {
+                                order: 1;
+                            }
+                        }
+                        @include mq('lg') {
+                            .service-image {
+                                order: 1;
+                            }
+                            .service-info {
+                                order: 2;
+                            }
+                        }
+                    }
                 }
             }
         }
     }
 
-    .testimonial-section {
-        width: 100%;
-        padding: 20px;
-        background: linear-gradient(rgba(0, 0, 0, .5)),
-                    url('../img/testimonial-bg-1.jpg') no-repeat center;
-        background-size: contain, cover;
-        @include mq('lg') {
-            height: 387px;
-        }
-        .testimonial-content {
-            max-width: 1100px;
-            margin: auto;
-            .testimonial-quote {
-                display: flex;
-                justify-content: space-between;
-                color: $white;
-                p {
-                    text-align: center;
-                    color: $white;
-                    font-size: 24px;
-                    font-weight: 300;
-                    line-height: 1.25em;
-                    letter-spacing: 2px;
-                    padding: 0 10px;
-                    @include mq('lg') {
-                        flex-basis: 905px;
-                    }
-                }
-                i {
-                    font-size: 24px;
-                }
-                i:first-child {
-                    margin-top: 24px;
-                    padding-left: 3px;
-                }
-                i:last-child {
-                    margin-top: auto;
-                    margin-bottom: 24px;
-                    padding-right: 3px;
-                }
-            }
-            span {
-                display: block;
-                margin: auto;
-                font-size: 18.5px;
-                font-weight: 300;
-                text-align: center;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                line-height: 1.3em;
-                color: $white;
-                margin-bottom: 28px;
-            }
-        }
-    }
+    @include testimonial-section;
 
     .partners-section {
         width: 100%;
-        padding: 80px 20px 60px;
+        padding: 80px 20px 40px;
         .partners-content {
             width: 100%;
             margin: auto;
             text-align: center;
+            @include mq('md') {
+                width: 728px;
+            } 
             @include mq('lg') {
                 width: 1110px;
             }
@@ -161,11 +198,17 @@
                 flex-flow: column nowrap;
                 justify-content: space-around;
                 align-items: center;
-                @include mq('lg') {
+                @include mq('md') {
                     flex-flow: row nowrap;
                 }
                 .partner {
                     padding-bottom: 50px;
+                    @include mq('md') {
+                        padding-bottom: 0;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
             }
         }
@@ -181,13 +224,16 @@
         }
         .booking-content {
             padding-bottom: 18px;
+            @include mq('md') {
+                width: 728px;
+                margin: auto;
+            }
             @include mq('lg') {
+                width: 1110px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                width: 1110px;
                 height: 100%;
-                margin: auto;
             }
             p {
                 text-align: center;
@@ -200,6 +246,7 @@
                     flex-basis: 800px;
                     text-align: left;
                     padding-bottom: 10px;
+                    font-size: 24px;
                 }
             }
             .btn {
@@ -208,6 +255,9 @@
                 margin: auto;
                 @include mq('lg') {
                     flex-basis: 200px;
+                }
+                &:hover {
+                    background-color: $primary-lighter;
                 }
             }
         }

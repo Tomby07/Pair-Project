@@ -598,6 +598,12 @@ a {
   margin: auto;
 }
 
+@media (min-width: 768px) {
+  .homepage .about-section .about-content {
+    width: 768px;
+  }
+}
+
 @media (min-width: 1150px) {
   .homepage .about-section .about-content {
     width: 1110px;
@@ -632,12 +638,43 @@ a {
 
 .homepage .services-section {
   width: 100%;
-  padding: 80px 20px 0;
+  padding-top: 80px;
 }
 
-.homepage .services-section .services-content {
-  width: 100%;
-  margin: auto;
+@media (min-width: 768px) {
+  .homepage .services-section {
+    padding-bottom: 60px;
+  }
+}
+
+.homepage .services-section h2 {
+  text-align: center;
+}
+
+@media (min-width: 1150px) {
+  .homepage .services-section h2 {
+    text-align: left;
+    margin-left: 1px;
+  }
+}
+
+.homepage .services-section .line-heading {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1150px) {
+  .homepage .services-section .line-heading {
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .homepage .services-section .services-content {
+    width: 768px;
+    margin: auto;
+  }
 }
 
 @media (min-width: 1150px) {
@@ -646,74 +683,178 @@ a {
   }
 }
 
-.homepage .services-section .services-content h2 {
+.homepage .services-section .services-content .services-list {
+  width: 100%;
   text-align: center;
 }
 
 @media (min-width: 1150px) {
-  .homepage .services-section .services-content h2 {
-    text-align: left;
-    margin-left: 1px;
-  }
-}
-
-.homepage .services-section .services-content .line-heading {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (min-width: 1150px) {
-  .homepage .services-section .services-content .line-heading {
-    margin-left: 0;
-  }
-}
-
-.homepage .services-section .services-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  text-align: center;
-}
-
-@media (min-width: 1150px) {
-  .homepage .services-section .services-list {
-    width: 1110px;
+  .homepage .services-section .services-content .services-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    text-align: center;
   }
 }
 
-.homepage .services-section .services-list div {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+.homepage .services-section .services-content .services-list .service {
+  display: block;
+}
+
+.homepage .services-section .services-content .services-list .service .service-image {
+  position: relative;
+  z-index: 1;
+  height: 200px;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.homepage .services-section .services-content .services-list .service .service-image img {
+  width: 100%;
+  min-width: 320px;
+  min-height: 200px;
+}
+
+.homepage .services-section .services-content .services-list .service .service-info {
+  display: block;
+  padding: 0 20px 40px;
+}
+
+.homepage .services-section .services-content .services-list .service .service-info h3 {
+  position: relative;
+  z-index: 2;
+  margin-top: -114.365px;
+  margin-bottom: 139.365px;
+}
+
+@media (max-width: 767px) {
+  .homepage .services-section .services-content .services-list .service .service-info h3 {
+    font-size: 32px;
+  }
+}
+
+.homepage .services-section .services-content .services-list .service .service-info .line-h3 {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .homepage .services-section .services-content .services-list .service {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 40px;
+  }
+  .homepage .services-section .services-content .services-list .service .service-image {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    margin-top: 65px;
+  }
+  .homepage .services-section .services-content .services-list .service .service-image img {
+    width: 300px;
+    min-width: 300px;
+  }
+  .homepage .services-section .services-content .services-list .service .service-info {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding: 0 20px;
+    -ms-flex-preferred-size: 430px;
+        flex-basis: 430px;
+  }
+  .homepage .services-section .services-content .services-list .service .service-info h3 {
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+  .homepage .services-section .services-content .services-list .service .service-info .line-h3 {
+    display: block;
+  }
 }
 
 @media (min-width: 1150px) {
-  .homepage .services-section .services-list div {
+  .homepage .services-section .services-content .services-list .service {
+    display: block;
     -ms-flex-preferred-size: 344px;
         flex-basis: 344px;
   }
+  .homepage .services-section .services-content .services-list .service .service-image img {
+    width: 344px;
+    min-width: 344px;
+  }
+  .homepage .services-section .services-content .services-list .service .service-info {
+    -ms-flex-preferred-size: 800px;
+        flex-basis: 800px;
+    padding: 0;
+  }
 }
 
-.homepage .services-section .services-list div img {
-  max-width: 100%;
+@media (min-width: 768px) {
+  .homepage .services-section .services-content .services-list .service:nth-child(2n+2) .service-image {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .homepage .services-section .services-content .services-list .service:nth-child(2n+2) .service-info {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 
-.homepage .services-section .services-list div p {
-  margin-bottom: 80px;
+@media (min-width: 1150px) {
+  .homepage .services-section .services-content .services-list .service:nth-child(2n+2) .service-image {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .homepage .services-section .services-content .services-list .service:nth-child(2n+2) .service-info {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+.homepage .quote-1 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url("../img/testimonial-bg-1.jpg") no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5)), url("../img/testimonial-bg-1.jpg") no-repeat center;
+  background-size: contain, cover;
+}
+
+.homepage .quote-2 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url("../img/testimonial-bg-2.jpg") no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5)), url("../img/testimonial-bg-2.jpg") no-repeat center;
+  background-size: contain, cover;
+}
+
+.homepage .quote-3 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url("../img/testimonial-bg-3.jpg") no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5)), url("../img/testimonial-bg-3.jpg") no-repeat center;
+  background-size: contain, cover;
+}
+
+.homepage .quote-4 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url("../img/testimonial-bg-4.jpg") no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5)), url("../img/testimonial-bg-4.jpg") no-repeat center;
+  background-size: contain, cover;
 }
 
 .homepage .testimonial-section {
   width: 100%;
   padding: 20px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url("../img/testimonial-bg-1.jpg") no-repeat center;
-  background: linear-gradient(rgba(0, 0, 0, 0.5)), url("../img/testimonial-bg-1.jpg") no-repeat center;
-  background-size: contain, cover;
 }
 
 @media (min-width: 1150px) {
@@ -740,11 +881,17 @@ a {
 .homepage .testimonial-section .testimonial-content .testimonial-quote p {
   text-align: center;
   color: #fff;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.25em;
   letter-spacing: 2px;
   padding: 0 10px;
+}
+
+@media (min-width: 768px) {
+  .homepage .testimonial-section .testimonial-content .testimonial-quote p {
+    font-size: 24px;
+  }
 }
 
 @media (min-width: 1150px) {
@@ -755,24 +902,36 @@ a {
 }
 
 .homepage .testimonial-section .testimonial-content .testimonial-quote i {
-  font-size: 24px;
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  .homepage .testimonial-section .testimonial-content .testimonial-quote i {
+    font-size: 24px;
+  }
 }
 
 .homepage .testimonial-section .testimonial-content .testimonial-quote i:first-child {
-  margin-top: 24px;
   padding-left: 3px;
+  margin-top: 18px;
+}
+
+@media (min-width: 768px) {
+  .homepage .testimonial-section .testimonial-content .testimonial-quote i:first-child {
+    margin-top: 24px;
+  }
 }
 
 .homepage .testimonial-section .testimonial-content .testimonial-quote i:last-child {
   margin-top: auto;
-  margin-bottom: 24px;
   padding-right: 3px;
+  margin-bottom: 26px;
 }
 
 .homepage .testimonial-section .testimonial-content span {
   display: block;
   margin: auto;
-  font-size: 18.5px;
+  font-size: 14px;
   font-weight: 300;
   text-align: center;
   text-transform: uppercase;
@@ -782,15 +941,46 @@ a {
   margin-bottom: 28px;
 }
 
+@media (min-width: 768px) {
+  .homepage .testimonial-section .testimonial-content span {
+    font-size: 18.5px;
+  }
+}
+
+.homepage .slick-dots {
+  bottom: 15px;
+}
+
+@media (min-width: 1150px) {
+  .homepage .slick-dots {
+    bottom: 60px;
+  }
+}
+
+.homepage .slick-dots li {
+  margin: 0 20px;
+}
+
+.homepage .slick-dots li button:before {
+  font-size: 12px;
+  color: white;
+}
+
 .homepage .partners-section {
   width: 100%;
-  padding: 80px 20px 60px;
+  padding: 80px 20px 40px;
 }
 
 .homepage .partners-section .partners-content {
   width: 100%;
   margin: auto;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .homepage .partners-section .partners-content {
+    width: 728px;
+  }
 }
 
 @media (min-width: 1150px) {
@@ -836,7 +1026,7 @@ a {
           align-items: center;
 }
 
-@media (min-width: 1150px) {
+@media (min-width: 768px) {
   .homepage .partners-section .partners-content .partners-list {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -847,6 +1037,16 @@ a {
 
 .homepage .partners-section .partners-content .partners-list .partner {
   padding-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .homepage .partners-section .partners-content .partners-list .partner {
+    padding-bottom: 0;
+  }
+}
+
+.homepage .partners-section .partners-content .partners-list .partner:hover {
+  cursor: pointer;
 }
 
 .homepage .booking-section {
@@ -866,8 +1066,16 @@ a {
   padding-bottom: 18px;
 }
 
+@media (min-width: 768px) {
+  .homepage .booking-section .booking-content {
+    width: 728px;
+    margin: auto;
+  }
+}
+
 @media (min-width: 1150px) {
   .homepage .booking-section .booking-content {
+    width: 1110px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -877,9 +1085,7 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 1110px;
     height: 100%;
-    margin: auto;
   }
 }
 
@@ -898,6 +1104,7 @@ a {
         flex-basis: 800px;
     text-align: left;
     padding-bottom: 10px;
+    font-size: 24px;
   }
 }
 
@@ -912,6 +1119,10 @@ a {
     -ms-flex-preferred-size: 200px;
         flex-basis: 200px;
   }
+}
+
+.homepage .booking-section .booking-content .btn:hover {
+  background-color: #e6e6e6;
 }
 
 .services-page .info-section {
@@ -964,12 +1175,94 @@ a {
 
 .services-page .services-section {
   width: 100%;
-  padding: 80px 20px 60px;
+  padding-top: 80px;
+}
+
+@media (min-width: 768px) {
+  .services-page .services-section {
+    padding-bottom: 60px;
+  }
 }
 
 .services-page .services-section .services-content {
   width: 100%;
-  margin: auto;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .services-page .services-section .services-content #service-corporate .service-image {
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .services-page .services-section .services-content #service-corporate .service-image img {
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .services-page .services-section .services-content #service-corporate.focused-service .service-image {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+  .services-page .services-section .services-content #service-corporate.focused-service .service-image img {
+    width: 110%;
+    margin-top: -5%;
+    margin-left: -5%;
+  }
+  .services-page .services-section .services-content #service-weddings .service-image {
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .services-page .services-section .services-content #service-weddings .service-image img {
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .services-page .services-section .services-content #service-weddings.focused-service .service-image {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+  .services-page .services-section .services-content #service-weddings.focused-service .service-image img {
+    width: 110%;
+    margin-top: -5%;
+    margin-left: -5%;
+  }
+  .services-page .services-section .services-content #service-events .service-image {
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .services-page .services-section .services-content #service-events .service-image img {
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .services-page .services-section .services-content #service-events.focused-service .service-image {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+  .services-page .services-section .services-content #service-events.focused-service .service-image img {
+    width: 110%;
+    margin-top: -5%;
+    margin-left: -5%;
+  }
+}
+
+@media (min-width: 768px) {
+  .services-page .services-section .services-content {
+    width: 768px;
+    margin: auto;
+  }
 }
 
 @media (min-width: 1150px) {
@@ -978,111 +1271,109 @@ a {
   }
 }
 
-.services-page .services-section .services-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  text-align: center;
+.services-page .services-section .services-content .service {
+  display: block;
+}
+
+.services-page .services-section .services-content .service .service-image {
+  position: relative;
+  z-index: 1;
+  height: 200px;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.services-page .services-section .services-content .service .service-image img {
+  width: 100%;
+  min-width: 320px;
+  min-height: 200px;
+}
+
+.services-page .services-section .services-content .service .service-info {
+  display: block;
+  padding: 0 20px 40px;
+}
+
+.services-page .services-section .services-content .service .service-info h3 {
+  position: relative;
+  z-index: 2;
+  margin-top: -114.365px;
+  margin-bottom: 139.365px;
+}
+
+@media (max-width: 767px) {
+  .services-page .services-section .services-content .service .service-info h3 {
+    font-size: 32px;
+  }
+}
+
+.services-page .services-section .services-content .service .service-info .line-h3 {
+  display: none;
 }
 
 @media (min-width: 768px) {
-  .services-page .services-section .services-list {
-    width: 768px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin: auto;
+  .services-page .services-section .services-content .service {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 40px;
+  }
+  .services-page .services-section .services-content .service .service-image {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    margin-top: 65px;
+  }
+  .services-page .services-section .services-content .service .service-image img {
+    width: 300px;
+    min-width: 300px;
+  }
+  .services-page .services-section .services-content .service .service-info {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding: 0 20px;
+    -ms-flex-preferred-size: 430px;
+        flex-basis: 430px;
+  }
+  .services-page .services-section .services-content .service .service-info h3 {
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+  .services-page .services-section .services-content .service .service-info .line-h3 {
+    display: block;
   }
 }
 
 @media (min-width: 1150px) {
-  .services-page .services-section .services-list {
-    width: 1110px;
+  .services-page .services-section .services-content .service .service-image img {
+    width: 400px;
+    min-width: 400px;
   }
-}
-
-.services-page .services-section .services-list .service {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  .services-page .services-section .services-content .service .service-info {
+    -ms-flex-preferred-size: 800px;
+        flex-basis: 800px;
+  }
 }
 
 @media (min-width: 768px) {
-  .services-page .services-section .services-list .service {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .services-page .services-section .services-list .service .service-image {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    min-width: 300px;
-  }
-  .services-page .services-section .services-list .service .service-info {
+  .services-page .services-section .services-content .service:nth-child(2n+2) .service-image {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    padding: 0 40px;
   }
-}
-
-.services-page .services-section .services-list .service img {
-  max-width: 300px;
-}
-
-.services-page .services-section .services-list .service p {
-  margin-bottom: 80px;
-}
-
-.services-page .services-section .services-list .service:nth-child(2n+2) {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-}
-
-@media (min-width: 768px) {
-  .services-page .services-section .services-list .service:nth-child(2n+2) {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .services-page .services-section .services-list .service:nth-child(2n+2) .service-image {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    min-width: 300px;
-  }
-  .services-page .services-section .services-list .service:nth-child(2n+2) .service-info {
+  .services-page .services-section .services-content .service:nth-child(2n+2) .service-info {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    padding: 0 40px;
   }
-}
-
-.services-page .services-section .services-list .service:nth-child(2n+2) img {
-  max-width: 300px;
-}
-
-.services-page .services-section .services-list .service:nth-child(2n+2) p {
-  margin-bottom: 80px;
 }
 
 .services-page .booking-section {
@@ -1102,8 +1393,16 @@ a {
   padding-bottom: 18px;
 }
 
+@media (min-width: 768px) {
+  .services-page .booking-section .booking-content {
+    width: 728px;
+    margin: auto;
+  }
+}
+
 @media (min-width: 1150px) {
   .services-page .booking-section .booking-content {
+    width: 1110px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1113,9 +1412,7 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 1110px;
     height: 100%;
-    margin: auto;
   }
 }
 
@@ -1134,6 +1431,7 @@ a {
         flex-basis: 800px;
     text-align: left;
     padding-bottom: 10px;
+    font-size: 24px;
   }
 }
 
@@ -1148,6 +1446,10 @@ a {
     -ms-flex-preferred-size: 200px;
         flex-basis: 200px;
   }
+}
+
+.services-page .booking-section .booking-content .btn:hover {
+  background-color: #e6e6e6;
 }
 
 .testimonials-page .info-section {
@@ -1251,11 +1553,17 @@ a {
 .testimonials-page .testimonial-section .testimonial-content .testimonial-quote p {
   text-align: center;
   color: #fff;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.25em;
   letter-spacing: 2px;
   padding: 0 10px;
+}
+
+@media (min-width: 768px) {
+  .testimonials-page .testimonial-section .testimonial-content .testimonial-quote p {
+    font-size: 24px;
+  }
 }
 
 @media (min-width: 1150px) {
@@ -1266,24 +1574,36 @@ a {
 }
 
 .testimonials-page .testimonial-section .testimonial-content .testimonial-quote i {
-  font-size: 24px;
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  .testimonials-page .testimonial-section .testimonial-content .testimonial-quote i {
+    font-size: 24px;
+  }
 }
 
 .testimonials-page .testimonial-section .testimonial-content .testimonial-quote i:first-child {
-  margin-top: 24px;
   padding-left: 3px;
+  margin-top: 18px;
+}
+
+@media (min-width: 768px) {
+  .testimonials-page .testimonial-section .testimonial-content .testimonial-quote i:first-child {
+    margin-top: 24px;
+  }
 }
 
 .testimonials-page .testimonial-section .testimonial-content .testimonial-quote i:last-child {
   margin-top: auto;
-  margin-bottom: 24px;
   padding-right: 3px;
+  margin-bottom: 26px;
 }
 
 .testimonials-page .testimonial-section .testimonial-content span {
   display: block;
   margin: auto;
-  font-size: 18.5px;
+  font-size: 14px;
   font-weight: 300;
   text-align: center;
   text-transform: uppercase;
@@ -1291,6 +1611,12 @@ a {
   line-height: 1.3em;
   color: #fff;
   margin-bottom: 28px;
+}
+
+@media (min-width: 768px) {
+  .testimonials-page .testimonial-section .testimonial-content span {
+    font-size: 18.5px;
+  }
 }
 
 .testimonials-page .slick-dots {
@@ -1408,15 +1734,27 @@ a {
           transform: rotate(45deg);
 }
 
-@media (min-width: 768px) {
-  .testimonials-page .pointer {
-    display: block;
-  }
-}
-
 .testimonials-page .partner-info-section {
   background-color: #3c3c3c;
   padding: 20px 0;
+}
+
+@media (max-width: 767px) {
+  .testimonials-page .partner-info-section {
+    min-height: 444px;
+  }
+}
+
+@media (min-width: 768px) {
+  .testimonials-page .partner-info-section {
+    height: 444px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .testimonials-page .partner-info-section {
+    height: 398px;
+  }
 }
 
 .testimonials-page .partner-info-section .partner-info-content {
@@ -1436,24 +1774,32 @@ a {
   }
 }
 
-.testimonials-page .partner-info-section .partner-info-content h3 {
+.testimonials-page .partner-info-section .partner-info-content .partner-info h3 {
   text-align: center;
 }
 
-.testimonials-page .partner-info-section .partner-info-content .line-h3 {
+.testimonials-page .partner-info-section .partner-info-content .partner-info .line-h3 {
   background-color: #fff;
 }
 
-.testimonials-page .partner-info-section .partner-info-content p {
+.testimonials-page .partner-info-section .partner-info-content .partner-info p {
   text-align: center;
   color: #fff;
   padding: 0 20px;
 }
 
-.testimonials-page .partner-info-section .partner-info-content .btn {
+.testimonials-page .partner-info-section .partner-info-content .partner-info .btn {
   background-color: #fff;
   color: #af473c;
   width: 250px;
   margin: 0 auto 25px;
+}
+
+.testimonials-page .partner-info-section .partner-info-content .partner-info .btn:hover {
+  background-color: #e6e6e6;
+}
+
+.testimonials-page .partner-info-section .partner-info-content .partner-info:nth-child(1n+2) {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

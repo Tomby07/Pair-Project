@@ -32,72 +32,188 @@
         }
     }
 
+    // .services-section {
+    //     width: 100%;
+    //     padding: 80px 20px 60px;
+    //     .services-content {
+    //         width: calc(100% + 40px);
+    //         margin-left: -20px;
+    //         @include mq('md') {
+    //             margin: auto;
+    //         }
+    //         @include mq('lg') {
+    //             width: 1110px;
+    //         }
+    //     }
+    //     .services-list {
+    //         display: flex;
+    //         flex-flow: row wrap;
+    //         text-align: center;
+    //         @include mq('md') {
+    //             width: 768px;
+    //             justify-content: space-between;
+    //             margin: auto;
+    //         }
+    //         @include mq('lg') {
+    //             width: 1110px;
+    //         }
+    //         .service {
+    //             transition: all 1s;
+    //             flex-basis: 100%;
+    //             .service-image {
+    //                 position: relative;
+    //                 z-index: 1;
+    //                 min-height: 200px;
+    //                 height: 200px;
+    //                 overflow: hidden;
+    //             }
+    //             h3 {
+    //                 position: relative;
+    //                 margin-top: -114.365px;
+    //                 margin-bottom: 139.365px;
+    //                 z-index: 2;
+    //             }
+    //             .line-h3 {
+    //                 display: none;
+    //             }
+    //             @include mq('md') {
+    //                 display: flex;
+    //                 justify-content: space-around;
+    //                 align-items: center;
+    //                 .service-image {
+    //                     order: 1;
+    //                     min-width: 300px;
+    //                 }
+    //                 .service-info {
+    //                     order: 2;
+    //                     flex-basis: auto;
+    //                     padding: 0 40px;
+    //                     .line-h3 {
+    //                         display: block;
+    //                     }
+    //                 }
+    //             }
+    //             img {
+    //                 width: 100%;
+    //                 margin-top: -10%;
+    //                 @include mq('md') {
+    //                     max-width: 300px;
+    //                 }
+    //             }
+    //             p {
+    //                 margin-bottom: 80px;
+    //             }
+    //         }
+    //         .service:nth-child(2n+2) {
+    //             flex-basis: 100%;
+    //             @include mq('md') {
+    //                 .service-image {
+    //                     order: 2;
+    //                 }
+    //                 .service-info {
+    //                     order: 1;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+
     .services-section {
         width: 100%;
-        padding: 80px 20px 60px;
+        padding-top: 80px;
+        @include mq('md') {
+            padding-bottom: 60px;
+        }
         .services-content {
             width: 100%;
-            margin: auto;
-            @include mq('lg') {
-                width: 1110px;
-            }
-        }
-        .services-list {
-            display: flex;
-            flex-flow: row wrap;
             text-align: center;
+            @include mq('sm') {
+                @include service-scroll-event;
+            }
             @include mq('md') {
                 width: 768px;
-                justify-content: space-between;
                 margin: auto;
             }
             @include mq('lg') {
                 width: 1110px;
             }
             .service {
-                flex-basis: 100%;
+                display: block;
+                .service-image {
+                    position: relative;
+                    z-index: 1;
+                    height: 200px;
+                    max-height: 200px;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        min-width: 320px;
+                        min-height: 200px;
+                    }
+                }
+                .service-info {
+                    display: block;
+                    padding: 0 20px 40px;
+                    h3 {
+                        position: relative;
+                        z-index: 2;
+                        margin-top: -114.365px;
+                        margin-bottom: 139.365px;
+                        @include mq('sm') {
+                            font-size: 32px;
+                        }
+                    }
+                    .line-h3 {
+                        display: none;
+                    }
+                }
                 @include mq('md') {
                     display: flex;
                     justify-content: space-around;
                     align-items: center;
+                    margin-bottom: 40px;
                     .service-image {
                         order: 1;
-                        min-width: 300px;
+                        flex-basis: auto;
+                        margin-top: 65px;
+                        img {
+                            width: 300px;
+                            min-width: 300px;
+                        }
                     }
                     .service-info {
                         order: 2;
-                        flex-basis: auto;
-                        padding: 0 40px;
+                        padding: 0 20px;
+                        flex-basis: 430px;
+                        h3 {
+                            margin-top: 25px;
+                            margin-bottom: 20px;
+                        }
+                        .line-h3 {
+                            display: block;
+                        }
                     }
                 }
-                img {
-                    max-width: 300px;
-                }
-                p {
-                    margin-bottom: 80px;
-                }
-            }
-            .service:nth-child(2n+2) {
-                flex-basis: 100%;
-                @include mq('md') {
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: center;
+                @include mq('lg') {
                     .service-image {
-                        order: 2;
-                        min-width: 300px;
+                        img {
+                            width: 400px;
+                            min-width: 400px;
+                        }
                     }
                     .service-info {
-                        order: 1;
-                        flex-basis: auto;
-                        padding: 0 40px;
+                        flex-basis: 800px;
                     }
                 }
-                img {
-                    max-width: 300px;
-                }
-                p {
-                    margin-bottom: 80px;
+                &:nth-child(2n+2) {
+                    @include mq('md') {
+                        .service-image {
+                            order: 2;
+                        }
+                        .service-info {
+                            order: 1;
+                        }
+                    }
                 }
             }
         }
@@ -113,13 +229,16 @@
         }
         .booking-content {
             padding-bottom: 18px;
+            @include mq('md') {
+                width: 728px;
+                margin: auto;
+            }
             @include mq('lg') {
+                width: 1110px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                width: 1110px;
                 height: 100%;
-                margin: auto;
             }
             p {
                 text-align: center;
@@ -132,6 +251,7 @@
                     flex-basis: 800px;
                     text-align: left;
                     padding-bottom: 10px;
+                    font-size: 24px;
                 }
             }
             .btn {
@@ -140,6 +260,9 @@
                 margin: auto;
                 @include mq('lg') {
                     flex-basis: 200px;
+                }
+                &:hover {
+                    background-color: $primary-lighter;
                 }
             }
         }

@@ -17,13 +17,119 @@
     }
 }
 
-// Testimonial slide background mixin
-@mixin testimonial-bg {
+// Testimonials section mixin
+@mixin testimonial-section {
     @for $i from 1 through 4 {
         .quote-#{$i} {
             background: linear-gradient(rgba(0, 0, 0, .5)),
                         url('../img/testimonial-bg-#{$i}.jpg') no-repeat center;
             background-size: contain, cover;
+        }
+    }
+    .testimonial-section {
+        width: 100%;
+        padding: 20px;
+        @include mq('lg') {
+            height: 387px;
+        }
+        .testimonial-content {
+            max-width: 1100px;
+            margin: auto;
+            .testimonial-quote {
+                display: flex;
+                justify-content: space-between;
+                color: $white;
+                p {
+                    text-align: center;
+                    color: $white;
+                    font-size: 18px;
+                    font-weight: 300;
+                    line-height: 1.25em;
+                    letter-spacing: 2px;
+                    padding: 0 10px;
+                    @include mq('md') {
+                        font-size: 24px;
+                    }
+                    @include mq('lg') {
+                        flex-basis: 905px;
+                    }
+                }
+                i {
+                    font-size: 18px;
+                    @include mq('md') {
+                        font-size: 24px;
+                    }
+                }
+                i:first-child {
+                    padding-left: 3px;
+                    margin-top: 18px;
+                    @include mq('md') {
+                        margin-top: 24px;
+                    }
+                }
+                i:last-child {
+                    margin-top: auto;
+                    padding-right: 3px;
+                    margin-bottom: 26px;
+                }
+            }
+            span {
+                display: block;
+                margin: auto;
+                font-size: 14px;
+                font-weight: 300;
+                text-align: center;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                line-height: 1.3em;
+                color: $white;
+                margin-bottom: 28px;
+                @include mq('md') {
+                    font-size: 18.5px;
+                }
+            }
+        }
+    }
+
+    .slick-dots {
+        bottom: 15px;
+        @include mq('lg') {
+            bottom: 60px;
+        }
+        li {
+            margin: 0 20px;
+            button:before {
+                font-size: 12px;
+                color: white;
+            }
+        }
+    }
+}
+
+// Service scroll event mixin
+@mixin service-scroll-event {
+    @each $service in $service-type {
+        #service-#{$service} {
+            .service-image {
+                filter: blur(4px);
+                transition: 1s;
+                img {
+                    width: 100%;
+                    margin-top: 0;
+                    margin-left: 0;
+                    transition: 1s;
+                }
+            }
+        }
+        #service-#{$service}.focused-service {
+            .service-image {
+                filter: blur(0);
+                img {
+                    width: 110%;
+                    margin-top: -5%;
+                    margin-left: -5%;
+                }
+            }
         }
     }
 }
