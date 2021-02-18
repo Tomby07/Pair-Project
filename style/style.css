@@ -1416,6 +1416,7 @@ body section .container .form {
   width: 100%;
   margin-top: 20px;
   font-size: 20px;
+  padding-bottom: 10px;
 }
 
 .form-group input,
