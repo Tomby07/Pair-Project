@@ -1,9 +1,10 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-body{
+
+.contact-page{
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
     .info-section {
         width: 100%;
         padding: 80px 20px 0;
@@ -52,8 +53,7 @@ body{
             }
         }
     }
-}
-.form-group input,
+    .form-group input,
 .form-group textarea{
     width: 100%;
     padding: 5px;
@@ -92,3 +92,5 @@ button[type="submit"]:hover{
     -ms-user-select: none;
     user-select: none;
 }
+}
+
