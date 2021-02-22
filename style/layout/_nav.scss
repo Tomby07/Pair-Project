@@ -12,6 +12,7 @@
             flex-direction: column;
             justify-content: space-between;
             text-align: center;
+            padding-left: 0;
             @include mq('md') {
                 width: 728px;
                 flex-direction: row;

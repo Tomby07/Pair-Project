@@ -662,6 +662,7 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   text-align: center;
+  padding-left: 0;
 }
 
 @media (min-width: 768px) {
