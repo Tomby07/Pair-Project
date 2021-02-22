@@ -1206,14 +1206,132 @@ a {
   background-color: #e6e6e6;
 }
 
-.services-page .info-section {
 .about-page .about-section {
   width: 100%;
   padding: 80px 20px 0;
 }
 
-.services-page .info-section .info-content {
 .about-page .about-section .about-content {
+  width: 100%;
+  margin: auto;
+}
+
+@media (min-width: 1150px) {
+  .about-page .about-section .about-content {
+    width: 1110px;
+  }
+}
+
+.about-page .about-section .about-content h2 {
+  text-align: center;
+}
+
+@media (min-width: 1150px) {
+  .about-page .about-section .about-content h2 {
+    text-align: left;
+    margin-left: 1px;
+  }
+}
+
+.about-page .about-section .about-content .line-heading {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1150px) {
+  .about-page .about-section .about-content .line-heading {
+    margin-left: 0;
+  }
+}
+
+.about-page .about-section .about-content p:last-child {
+  margin-bottom: 80px;
+}
+
+.services-section {
+  width: 100%;
+  padding: 80px 20px 0;
+}
+
+.services-section .services-content {
+  width: 100%;
+  margin: auto;
+}
+
+@media (min-width: 1150px) {
+  .services-section .services-content {
+    width: 1110px;
+  }
+}
+
+.services-section .services-content h2 {
+  text-align: center;
+}
+
+@media (min-width: 1150px) {
+  .services-section .services-content h2 {
+    text-align: left;
+    margin-left: 1px;
+  }
+}
+
+.services-section .services-content .line-heading {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1150px) {
+  .services-section .services-content .line-heading {
+    margin-left: 0;
+  }
+}
+
+.services-section .services-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  text-align: center;
+}
+
+@media (min-width: 1150px) {
+  .services-section .services-list {
+    width: 1110px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.services-section .services-list div {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+@media (min-width: 1150px) {
+  .services-section .services-list div {
+    -ms-flex-preferred-size: 344px;
+        flex-basis: 344px;
+  }
+}
+
+.services-section .services-list div img {
+  max-width: 100%;
+}
+
+.services-section .services-list div p {
+  margin-bottom: 80px;
+}
+
+.services-page .info-section {
+  width: 100%;
+  padding: 80px 20px 0;
+}
+
+.services-page .info-section .info-content {
   width: 100%;
   margin: auto;
 }
@@ -1226,34 +1344,28 @@ a {
 
 @media (min-width: 1150px) {
   .services-page .info-section .info-content {
-@media (min-width: 1150px) {
-  .about-page .about-section .about-content {
     width: 1110px;
   }
 }
 
 .services-page .info-section .info-content h2 {
-.about-page .about-section .about-content h2 {
   text-align: center;
 }
 
 @media (min-width: 1150px) {
   .services-page .info-section .info-content h2 {
-  .about-page .about-section .about-content h2 {
     text-align: left;
     margin-left: 1px;
   }
 }
 
 .services-page .info-section .info-content .line-heading {
-.about-page .about-section .about-content .line-heading {
   margin-left: auto;
   margin-right: auto;
 }
 
 @media (min-width: 1150px) {
   .services-page .info-section .info-content .line-heading {
-  .about-page .about-section .about-content .line-heading {
     margin-left: 0;
   }
 }
@@ -1356,22 +1468,6 @@ a {
 
 @media (min-width: 1150px) {
   .services-page .services-section .services-content {
-.about-page .about-section .about-content p:last-child {
-  margin-bottom: 80px;
-}
-
-.services-section {
-  width: 100%;
-  padding: 80px 20px 0;
-}
-
-.services-section .services-content {
-  width: 100%;
-  margin: auto;
-}
-
-@media (min-width: 1150px) {
-  .services-section .services-content {
     width: 1110px;
   }
 }
@@ -1555,66 +1651,6 @@ a {
 
 .services-page .booking-section .booking-content .btn:hover {
   background-color: #e6e6e6;
-.services-section .services-content h2 {
-  text-align: center;
-}
-
-@media (min-width: 1150px) {
-  .services-section .services-content h2 {
-    text-align: left;
-    margin-left: 1px;
-  }
-}
-
-.services-section .services-content .line-heading {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (min-width: 1150px) {
-  .services-section .services-content .line-heading {
-    margin-left: 0;
-  }
-}
-
-.services-section .services-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  text-align: center;
-}
-
-@media (min-width: 1150px) {
-  .services-section .services-list {
-    width: 1110px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
-.services-section .services-list div {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-}
-
-@media (min-width: 1150px) {
-  .services-section .services-list div {
-    -ms-flex-preferred-size: 344px;
-        flex-basis: 344px;
-  }
-}
-
-.services-section .services-list div img {
-  max-width: 100%;
-}
-
-.services-section .services-list div p {
-  margin-bottom: 80px;
 }
 
 .testimonials-page .info-section {
@@ -1966,6 +2002,8 @@ a {
 
 .testimonials-page .partner-info-section .partner-info-content .partner-info:nth-child(1n+2) {
   display: none;
+}
+
 * {
   padding: 0;
   margin: 0;
