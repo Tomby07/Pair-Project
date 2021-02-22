@@ -2,9 +2,30 @@
     .banner-img{
         width: 100%;
     }
-    .logo-text{
+    .logo-img{
         position: absolute;
-        top: 8px;
-        left: 60px;
+        top: 20px;
+        left: 20px;
+        width: 80px;
+        @include mq('lg') {
+            width: 160px;
+        }
     }
+    .logo-text-2{
+        position: absolute;
+        top: 40px;
+        right: 16px;
+        color: white;
+        text-align: right;
+        @include mq('lg') {
+            h3{
+                font-size: xx-large;
+            }
+            p{
+                font-size: x-large;
+            }
+            top: 140px;
+        }
+    }
+    
 }

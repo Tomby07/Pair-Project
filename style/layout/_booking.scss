@@ -1,0 +1,41 @@
+body{
+    .info-section {
+        width: 100%;
+        padding: 80px 20px 0;
+        .info-content {
+            width: 100%;
+            margin: auto;
+            @include mq('lg') {
+                width: 1110px;
+            }
+            h2 {
+                text-align: center;
+                @include mq('lg') {
+                    text-align: left;
+                    margin-left: 1px;
+                }
+            }
+            .line-heading {
+                margin-left: auto;
+                margin-right: auto;
+                @include mq('lg') {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+.booking-choice{
+    .check-container {
+        display: block;
+        position: relative;
+        margin-top: 10px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 15px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+}
