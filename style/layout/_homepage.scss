@@ -7,7 +7,7 @@
             width: 100%;
             margin: auto;
             @include mq('md') {
-                width: 768px;
+                width: 728px;
             }
             @include mq('lg') {
                 width: 1110px;
@@ -55,7 +55,7 @@
         }
         .services-content {
             @include mq('md') {
-                width: 768px;
+                width: 728px;
                 margin: auto;
             }
             @include mq('lg') {
@@ -80,7 +80,7 @@
                         overflow: hidden;
                         img {
                             width: 100%;
-                            min-width: 320px;
+                            min-width: 280px;
                             min-height: 200px;
                         }
                     }

@@ -1,4 +1,4 @@
-body{
+.booking-page{
     .info-section {
         width: 100%;
         padding: 80px 20px 0;
@@ -24,18 +24,18 @@ body{
             }
         }
     }
-}
-.booking-choice{
-    .check-container {
-        display: block;
-        position: relative;
-        margin-top: 10px;
-        margin-bottom: 12px;
-        cursor: pointer;
-        font-size: 15px;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+    .booking-choice{
+        .check-container {
+            display: block;
+            position: relative;
+            margin-top: 10px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 15px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
     }
 }
